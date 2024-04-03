@@ -65,7 +65,7 @@ body::after {
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
-		padding: 2px 32px;
+		padding: 2px 16px;
 		border-radius: 9999px;
 
 		background: linear-gradient(
@@ -81,7 +81,7 @@ body::after {
 		}
 
 		ul {
-			margin-right: 36px;
+			margin-right: 20px;
 			list-style-type: none;
 			display: flex;
 
