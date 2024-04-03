@@ -1,0 +1,128 @@
+:root {
+	--color-bg: #080b12;
+	--color-bg-secondary: #262e40;
+	--color-bg-secondary-outline: #474d5c;
+
+	--color-header: #fff;
+	--color-header-secondary: #aaa;
+
+	--color-primary-light: #acc8ff;
+	--color-primary-dark: #4866ab;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Rubik", sans-serif;
+
+	overflow-x: hidden;
+	background: var(--color-bg);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+body {
+	cursor: url("/assets/images/cursor/smg_cursor_pointer.svg") 2 2, auto;
+
+	min-height: 100vh;
+	height: 100%;
+
+	width: 100vw;
+	max-width: 900px;
+}
+
+body::after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1;
+	content: url("/assets/images/cursor/smg_cursor_pointer.svg")
+		url("/assets/images/cursor/smg_cursor_hand.svg")
+		url("/assets/images/cursor/smg_cursor_grab.svg");
+}
+
+#navbar {
+	margin-top: 16px;
+
+	border-radius: 9999px;
+	padding: 1px;
+	background: linear-gradient(to bottom, #d9f3ff, #6a87c7);
+	border: 1.5px solid var(--color-primary-dark);
+
+	div {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		padding: 2px 32px;
+		border-radius: 9999px;
+
+		background: linear-gradient(
+			var(--color-primary-light),
+			var(--color-primary-dark)
+		);
+		color: var(--color-header);
+		text-shadow: 0 1px 0 var(--color-bg-secondary);
+
+		#logo {
+			display: flex;
+			align-items: center;
+		}
+
+		ul {
+			margin-right: 36px;
+			list-style-type: none;
+			display: flex;
+
+			li {
+				height: 100%;
+				padding: 1px 20px;
+
+				display: flex;
+				align-items: center;
+				border-left: 2px solid transparent;
+				border-right: 2px solid transparent;
+			}
+
+			li:hover {
+				background: linear-gradient(
+					var(--color-primary-light),
+					var(--color-primary-dark),
+					var(--color-primary-dark)
+				);
+				border-image: linear-gradient(
+						to bottom,
+						transparent,
+						var(--color-primary-light),
+						transparent
+					)
+					1 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#navbar {
+		border-radius: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		border-left: none;
+		border-right: none;
+
+		div {
+			border-radius: 0;
+		}
+	}
+}

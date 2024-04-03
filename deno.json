@@ -1,0 +1,13 @@
+{
+	"tasks": {
+		"lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A - --config _lume.ts",
+		"build": "deno task lume",
+		"serve": "deno task lume -s"
+	},
+	"compilerOptions": {
+		"types": ["lume/types.ts"]
+	},
+	"imports": {
+		"lume/": "https://raw.githubusercontent.com/malloryhayr/lume/main/"
+	}
+}
