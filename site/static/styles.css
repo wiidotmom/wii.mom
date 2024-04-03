@@ -126,3 +126,9 @@ body::after {
 		}
 	}
 }
+
+@media screen and (max-width: 760px) {
+	#navbar > div > ul {
+		display: none;
+	}
+}
