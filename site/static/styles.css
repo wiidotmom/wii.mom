@@ -109,6 +109,18 @@ body::after {
 					)
 					1 100%;
 			}
+
+			li:last-child {
+				margin-right: -36px;
+				padding-right: 30px;
+			}
+
+			li:last-child:hover {
+				border-top-right-radius: 9999px;
+				border-bottom-right-radius: 9999px;
+				border-right: none;
+				padding-right: 31.7px;
+			}
 		}
 	}
 }
