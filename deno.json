@@ -1,14 +1,9 @@
 {
 	"tasks": {
-		"lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A - --config _lume.ts",
-		"build": "deno task lume",
-		"serve": "deno task lume -s",
-		"cache": "deno cache --lock-write --reload _lume.ts"
-	},
-	"compilerOptions": {
-		"types": ["lume/types.ts"]
+		"build": "deno run --allow-read --allow-write --allow-net --allow-env --allow-sys --allow-ffi npm:@11ty/eleventy",
+		"serve": "deno run --allow-read --allow-write --allow-net --allow-env --allow-sys --allow-ffi npm:@11ty/eleventy --serve"
 	},
 	"imports": {
-		"lume/": "https://raw.githubusercontent.com/malloryhayr/lume/main/"
+		"@11ty/eleventy": "npm:@11ty/eleventy@^3.0.0"
 	}
 }
