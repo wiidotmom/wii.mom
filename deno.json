@@ -1,9 +1,0 @@
-{
-	"tasks": {
-		"build": "deno run --allow-read --allow-write --allow-net --allow-env --allow-sys --allow-ffi npm:@11ty/eleventy",
-		"serve": "deno run --allow-read --allow-write --allow-net --allow-env --allow-sys --allow-ffi npm:@11ty/eleventy --serve"
-	},
-	"imports": {
-		"@11ty/eleventy": "npm:@11ty/eleventy@^3.0.0"
-	}
-}
