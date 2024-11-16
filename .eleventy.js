@@ -4,6 +4,7 @@ import { VentoPlugin } from "eleventy-plugin-vento";
 export default async function(eleventyConfig) {
   eleventyConfig.setInputDirectory("site");
   eleventyConfig.setOutputDirectory("public");
+  eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPlugin(VentoPlugin, {
     plugins: [],
 

@@ -1,0 +1,69 @@
+:root {
+  --color-bg: #080b12;
+  --color-bg-secondary: #262e40;
+  --color-bg-secondary-outline: #474d5c;
+  --color-bg-content: #eee;
+
+  --color-header: #fff;
+  --color-header-secondary: #aaa;
+
+  --color-primary-light: #acc8ff;
+  --color-primary-dark: #4866ab;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  cursor: url("/assets/images/cursor/smg_cursor_pointer.svg") 2 2, auto;
+}
+
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("/assets/images/cursor/smg_cursor_pointer.svg")
+    url("/assets/images/cursor/smg_cursor_hand.svg")
+    url("/assets/images/cursor/smg_cursor_grab.svg");
+}
+
+a:hover {
+  cursor: url("/assets/images/cursor/smg_cursor_hand.svg") 2 2, auto;
+}
+
+a:focus {
+  cursor: url("/assets/images/cursor/smg_cursor_grab.svg") 2 2, auto;
+}
