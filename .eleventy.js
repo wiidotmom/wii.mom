@@ -5,6 +5,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.setInputDirectory("site");
   eleventyConfig.setOutputDirectory("public");
   eleventyConfig.addPassthroughCopy("site/assets");
+  eleventyConfig.addPassthroughCopy({ "bsky-pathfinder/dist": "bsky-pathfinder" });
   eleventyConfig.addPlugin(VentoPlugin, {
     plugins: [],
 

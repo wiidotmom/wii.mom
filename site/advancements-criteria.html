@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Datapack Criteria Helper</title>
+  </head>
+  <body>
+    <h1>Datapack Criteria Helper</h1>
+    <h3>Made by <a href="https://igalaxy.dev" target="_blank">iGalaxy</a></h3>
+    <br>
+    <p>
+      Criteria Count: <input
+        type="number"
+        id="count"
+        name="count"
+        value="1"
+        style="width: 75px"
+      >
+    </p>
+    <p>
+      Advancement: <input
+        type="text"
+        id="adv"
+        name="adv"
+        placeholder="existence_smp:stats/deaths/six_feet_under"
+        style="width: 500px"
+      >
+    </p>
+    <p>
+      Score: <input
+        type="text"
+        id="score"
+        name="score"
+        placeholder="exi_deaths"
+        style="width: 500px"
+      >
+    </p>
+    <button id="generate">Generate</button>
+    <br>
+    <p>Criteria</p>
+    <textarea readonly id="output">Click button to generate!</textarea>
+    <br>
+    <p>Function</p>
+    <textarea readonly id="output2">Click button to generate!</textarea>
+    <script>
+    document.getElementById("generate").addEventListener("click", function() {
+      const count = document.getElementById("count").value,
+        adv = document.getElementById("adv").value,
+        score = document.getElementById("score").value;
+      let output = "";
+      let output2 = "";
+      for (let x = 0; x < count; x++) {
+        output = `${output}"${
+          x + 1
+        }": {\n  "trigger": "minecraft:impossible"\n},\n`;
+        output2 = `${output2}advancement grant @s[scores={${score}=${
+          x + 1
+        }..}] only ${adv} ${x + 1}\n`;
+      }
+      document.getElementById("output").innerHTML = output.substring(
+        0,
+        output.length - 2,
+      );
+      document.getElementById("output2").innerHTML = output2.substring(
+        0,
+        output2.length - 1,
+      );
+    });
+    </script>
+  </body>
+</html>
