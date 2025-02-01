@@ -6,6 +6,6 @@
   },
   "scripts": {
     "serve": "pnpm dlx @11ty/eleventy --serve",
-    "build": "rm -f -r public && pnpm --dir site/bsky-pathfinder build && pnpm dlx @11ty/eleventy && rm -r public/bsky-pathfinder/dist"
+    "build": "pnpm --dir bsky-pathfinder build && pnpm dlx @11ty/eleventy"
   }
 }
