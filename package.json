@@ -7,6 +7,5 @@
   "scripts": {
     "serve": "pnpm dlx @11ty/eleventy --serve",
     "build": "pnpm dlx @11ty/eleventy"
-  },
-  "packageManager": "pnpm@9.13.0"
+  }
 }
