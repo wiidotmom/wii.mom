@@ -1,0 +1,10 @@
+[
+  {
+    "from": "/bsky-pathfinder/",
+    "to": "/tools/bsky-pathfinder/"
+  },
+  {
+    "from": "/advancements-criteria/",
+    "to": "/tools/advancements-criteria/"
+  }
+]
