@@ -23,7 +23,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build bsky-pathfinder
+        working-directory: ./bsky-pathfinder
+        run: |
+          pnpm install
+          npm build
+
+      - name: Build site
         run: pnpm build
 
       - name: deploy2nekoweb
