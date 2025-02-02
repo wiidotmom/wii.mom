@@ -6,7 +6,7 @@
   },
   "scripts": {
     "serve": "pnpm dlx @11ty/eleventy --serve",
-    "build": "pnpm --dir bsky-pathfinder build && pnpm dlx @11ty/eleventy",
+    "build": "pnpm --dir bsky-pathfinder install && pnpm --dir bsky-pathfinder build && pnpm dlx @11ty/eleventy",
     "format": "pnpm dlx dprint fmt"
   }
 }
