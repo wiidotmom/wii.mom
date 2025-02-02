@@ -2,4 +2,4 @@
 layout: index.vto
 ---
 
-# hack the world !!!!!!!
+welcome to igalaxy's comet observatory, a mashup of all the things i love put into a website. content coming uhhh soon

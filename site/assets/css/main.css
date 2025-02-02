@@ -4,8 +4,8 @@
   --color-bg-secondary-outline: #474d5c;
   --color-bg-content: #eee;
 
-  --color-header: #fff;
-  --color-header-secondary: #aaa;
+  --color-text: #f2f6ff;
+  --color-text-secondary: #c2c7d1;
 
   --color-primary-light: #acc8ff;
   --color-primary-dark: #4866ab;
@@ -21,11 +21,23 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
 body {
+  width: 800px;
   min-height: 100vh;
   line-height: 1.5;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-bg);
 }
 
 h1, h2, h3, h4, button, input, label {
