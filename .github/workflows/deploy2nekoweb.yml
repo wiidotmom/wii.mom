@@ -3,15 +3,27 @@ on:
     branches:
       - "rewrite"
 
+concurrency:
+  group: production
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: production
     name: deploy2nekoweb
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: "recursive"
+
+      - uses: altinukshini/deployment-action@releases/v1
+        name: Create GitHub deployment
+        id: deployment
+        with:
+          token: "${{ github.token }}"
+          target_url: https://wii.nekoweb.org
+          environment: production
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
@@ -38,3 +50,21 @@ jobs:
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
           nekoweb-folder: "public"
           directory: "public"
+
+      - name: Update deployment status (success)
+        if: success()
+        uses: altinukshini/deployment-status@releases/v1
+        with:
+          token: "${{ github.token }}"
+          target_url: http://my-app-url.com
+          state: "success"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: altinukshini/deployment-status@releases/v1
+        with:
+          token: "${{ github.token }}"
+          target_url: http://my-app-url.com
+          state: "failure"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
