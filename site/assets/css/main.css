@@ -23,6 +23,7 @@ html {
   text-size-adjust: none;
   background-color: var(--color-bg);
   overflow-x: hidden;
+  cursor: url("/assets/images/cursor/smg_cursor_pointer.svg") 2 2, auto;
 }
 
 body {
@@ -55,10 +56,6 @@ a:not([class]) {
 
 :target {
   scroll-margin-block: 5ex;
-}
-
-html {
-  cursor: url("/assets/images/cursor/smg_cursor_pointer.svg") 2 2, auto;
 }
 
 body::after {
