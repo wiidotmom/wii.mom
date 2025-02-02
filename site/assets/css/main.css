@@ -57,7 +57,7 @@ a:not([class]) {
   scroll-margin-block: 5ex;
 }
 
-body {
+html {
   cursor: url("/assets/images/cursor/smg_cursor_pointer.svg") 2 2, auto;
 }
 
