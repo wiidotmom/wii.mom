@@ -331,14 +331,23 @@ footer {
   height: 34px;
 }
 
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 675px) {
   #today {
+    display: none !important;
+  }
+  #splash-text {
     display: none !important;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 525px) {
   #avatar {
     display: none !important;
+  }
+  #main-container {
+    flex-direction: column;
+  }
+  #nav-container > nav > ul {
+    flex-wrap: wrap;
   }
 }
