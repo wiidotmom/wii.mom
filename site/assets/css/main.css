@@ -161,6 +161,16 @@ a:focus {
         var(--color-primary-dark) 45%,
         var(--color-primary-dark-er)
       );
+      ul:not(#today) {
+        li:not(.disabled):hover {
+          background: linear-gradient(
+            to top,
+            var(--color-primary-dark-ish) 50%,
+            var(--color-primary-dark) 45%,
+            var(--color-primary-dark-er)
+          );
+        }
+      }
       ul {
         display: flex;
         margin: 0;
@@ -171,18 +181,14 @@ a:focus {
           display: flex;
           justify-content: center;
           align-items: center;
+          padding: 5px;
+          text-shadow: var(--color-text-secondary) 0px 0px 4px;
+        }
+        li:has(a) {
+          padding: 0 !important;
           a {
             padding: 5px;
           }
-          text-shadow: var(--color-text-secondary) 0px 0px 4px;
-        }
-        li:not(.disabled):hover {
-          background: linear-gradient(
-            to top,
-            var(--color-primary-dark-ish) 50%,
-            var(--color-primary-dark) 45%,
-            var(--color-primary-dark-er)
-          );
         }
         li:has(#today-moon-phase) {
           display: block;
