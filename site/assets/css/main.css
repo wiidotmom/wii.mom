@@ -284,6 +284,7 @@ img {
   margin-left: 13px;
   margin-top: 13px;
   box-shadow: #101728 0px 0px 2px 1px;
+  background-color: #0c121f;
 }
 
 @media only screen and (max-width: 625px) {
