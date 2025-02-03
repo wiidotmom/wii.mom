@@ -170,7 +170,9 @@ a:focus {
     #logo {
       h1, h2 {
         margin: 5px;
-        text-shadow: var(--color-text-secondary) 0px 0px 4px;
+        text-shadow:
+          var(--color-bg-secondary) 0 1px 0,
+          var(--color-text-secondary) 0px 0px 4px;
       }
       h2 {
         margin-left: 18px;
@@ -207,7 +209,9 @@ a:focus {
           justify-content: center;
           align-items: center;
           padding: 5px;
-          text-shadow: var(--color-text-secondary) 0px 0px 4px;
+          text-shadow:
+            var(--color-bg-secondary) 0 1px 0,
+            var(--color-text-secondary) 0px 0px 4px;
         }
         li:has(a) {
           padding: 0 !important;
