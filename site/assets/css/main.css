@@ -157,7 +157,7 @@ a:focus {
     transform: rotate(-15deg) scale(1);
   }
   50% {
-    transform: rotate(-15deg) scale(1.5);
+    transform: rotate(-15deg) scale(1.4);
   }
   100% {
     transform: rotate(-15deg) scale(1);
