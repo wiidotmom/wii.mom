@@ -178,6 +178,13 @@ a:focus {
   width: 200px;
 }
 
+@media (prefers-reduced-motion) {
+  #splash-text {
+    animation: none;
+    transform: rotate(-15deg);
+  }
+}
+
 #main-header {
   display: flex;
   height: 150px;
