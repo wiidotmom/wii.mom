@@ -22,6 +22,9 @@
   --color-primary-dark-ish: #5477b8;
   --color-primary-dark: #4866ab;
   --color-primary-dark-er: #3e4a9f;
+
+  --color-alert-shine: #ff4552;
+  --color-alert: #ff0033;
 }
 
 *,
@@ -123,6 +126,27 @@ a:focus {
   width: 100%;
   height: 100%;
   backdrop-filter: grayscale(0.7);
+}
+
+.new {
+  position: relative;
+}
+
+.new::after {
+  top: 0;
+  right: 0;
+  position: absolute;
+  content: "new!";
+  font-size: 8px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-alert-shine) 50%,
+    var(--color-alert-shine) 45%,
+    var(--color-alert)
+  );
+  padding: 2px;
+  padding-bottom: 4px;
+  line-height: 4px;
 }
 
 #main-header {
