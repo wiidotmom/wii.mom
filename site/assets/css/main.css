@@ -195,6 +195,7 @@ a:focus {
   background-color: var(--color-bg-secondary);
   color: var(--color-text);
   opacity: 0;
+  pointer-events: none;
 }
 
 #skip-to-main:focus {
