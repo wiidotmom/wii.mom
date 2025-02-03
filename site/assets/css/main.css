@@ -149,6 +149,7 @@ a:focus {
   padding: 2px;
   padding-bottom: 4px;
   line-height: 4px;
+  pointer-events: none;
 }
 
 @keyframes splash-text {
