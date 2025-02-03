@@ -92,3 +92,10 @@ const splashTexts = [
 ];
 
 document.getElementById("splash-text").textContent = splashTexts[Math.floor(Math.random() * splashTexts.length)];
+
+const avatars = [
+  "/assets/images/avatars/igalaxy-mii.png",
+  "/assets/images/avatars/igalaxy-minecraft.png",
+];
+
+document.getElementById("avatar-image").src = avatars[Math.floor(Math.random() * avatars.length)];

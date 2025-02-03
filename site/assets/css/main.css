@@ -97,6 +97,8 @@ a:focus {
 
 #avatar {
   position: relative;
+  background: url("/assets/images/avatars/igalaxy-background.png");
+  image-rendering: pixelated;
 }
 
 #avatar::after {
