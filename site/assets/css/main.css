@@ -280,17 +280,6 @@ img {
   width: 8px;
   height: 8px;
   object-fit: none;
-  /**
-  full: -12px -12px;
-  waning gibbous: -44px -12px;
-  last quarter: -76px -12px;
-  waning crescent: -108px -12px;
-  new: -12px -44px;
-  waxing crescent -44px -44px;
-  1st quarter: -76px -44px;
-  waxing gibbous: -108px -44px;
-  */
-  object-position: -12px -12px;
   transform: scale(4.25);
   margin-left: 13px;
   margin-top: 13px;
