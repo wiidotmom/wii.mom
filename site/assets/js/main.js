@@ -80,9 +80,15 @@ const moonElement = document.getElementById("today-moon-phase");
 moonElement.style.objectPosition = getOffsetFromLunarPhase(getLunarPhase());
 moonElement.title = getLunarPhase();
 
-const dateElement = document.getElementById("today-date");
-dateElement.textContent = new Date().toLocaleDateString("en-US", {
+document.getElementById("today-date").textContent = new Date().toLocaleDateString("en-US", {
   year: "numeric",
   month: "short",
   day: "2-digit",
 });
+
+const splashTexts = [
+  "it's a website!",
+  "made with eleventy!",
+];
+
+document.getElementById("splash-text").textContent = splashTexts[Math.floor(Math.random() * splashTexts.length)];

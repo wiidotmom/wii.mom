@@ -1,12 +1,12 @@
 @font-face {
   font-family: Minecraft;
-  src: url("/255/assets/fonts/Minecraft.otf") format("opentype");
+  src: url("/assets/fonts/Minecraft.otf") format("opentype");
 }
 
 @font-face {
   font-family: Minecraft;
   font-weight: bold;
-  src: url("/255/assets/fonts/Minecraft-Bold.otf") format("opentype");
+  src: url("/assets/fonts/Minecraft-Bold.otf") format("opentype");
 }
 
 :root {
@@ -149,6 +149,35 @@ a:focus {
   line-height: 4px;
 }
 
+@keyframes splash-text {
+  0% {
+    transform: rotate(-15deg) scale(1);
+  }
+  50% {
+    transform: rotate(-15deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-15deg) scale(1);
+  }
+}
+
+#splash-text {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Minecraft";
+  text-shadow: #3f3f00 2px 2px 0px;
+  color: #ffff00;
+  animation: 1.5s ease-in-out 0s splash-text;
+  animation-iteration-count: infinite;
+  z-index: 999;
+  pointer-events: none;
+  text-align: center;
+  width: 200px;
+}
+
 #main-header {
   display: flex;
   height: 150px;
@@ -173,11 +202,13 @@ a:focus {
         text-shadow:
           var(--color-bg-secondary) 0 1px 0,
           var(--color-text-secondary) 0px 0px 4px;
+        max-width: 390px;
       }
       h2 {
         margin-left: 18px;
         margin-bottom: -15px;
       }
+      position: relative;
     }
     nav {
       display: flex;
