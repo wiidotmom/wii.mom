@@ -165,6 +165,7 @@ a:focus {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
+    background-position-x: right;
     justify-content: end;
     #logo {
       h1, h2 {
