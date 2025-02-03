@@ -10,26 +10,21 @@ metadata:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ metadata.title }}</title>
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-
-    <meta
-      name="description"
-      content="{{ metadata.description }}"
+    <link
+      rel="preload"
+      href="/assets/images/avatar/igalaxy-2025.jpg"
+      as="image"
     >
-    <meta name="generator" content="Eleventy">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wii.mom">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="{{ metadata.title }}">
-    <meta
-      property="og:description"
-      content="{{ metadata.description }}"
+    <link
+      rel="preload"
+      href="/assets/images/observatory/comet-observatory.png"
+      as="image"
     >
-    <meta property="og:image" content="/assets/images/favicon-128x.png" />
-
-    <meta name="theme-color" content="#acc8ff" />
+    <link
+      rel="preload"
+      href="/assets/images/moon-phases.png"
+      as="image"
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,23 +46,29 @@ metadata:
       type="font/otf"
       crossorigin
     >
-    <link
-      rel="preload"
-      href="/assets/images/avatar/igalaxy-2025.jpg"
-      as="image"
-    >
-    <link
-      rel="preload"
-      href="/assets/images/observatory/comet-observatory.png"
-      as="image"
-    >
-    <link
-      rel="preload"
-      href="/assets/images/moon-phases.png"
-      as="image"
-    >
 
     <link rel="stylesheet" href="/assets/css/main.css?updated={{ Date.now() }}">
+
+    <title>{{ metadata.title }}</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+    <meta
+      name="description"
+      content="{{ metadata.description }}"
+    >
+    <meta name="generator" content="Eleventy">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wii.mom">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="{{ metadata.title }}">
+    <meta
+      property="og:description"
+      content="{{ metadata.description }}"
+    >
+    <meta property="og:image" content="/assets/images/favicon-128x.png" />
+
+    <meta name="theme-color" content="#acc8ff" />
   </head>
   <body>
     <header id="main-header">
