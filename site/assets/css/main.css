@@ -258,7 +258,7 @@ img {
   }
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 500px) {
   #avatar {
     display: none !important;
   }
