@@ -71,6 +71,7 @@ metadata:
     <meta name="theme-color" content="#acc8ff" />
   </head>
   <body>
+    <a href="#main-content" id="skip-to-main">Skip to main content</a>
     <header id="main-header">
       <div id="avatar">
         <img
@@ -108,7 +109,9 @@ metadata:
         </nav>
       </div>
     </header>
-    <div id="main-container">{{ content }}</div>
+    <div id="main-container">
+      <aside></aside> {{ content }}
+    </div>
     <footer>this is footer</footer>
     <script src="/assets/js/main.js"></script>
   </body>
