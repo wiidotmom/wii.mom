@@ -88,7 +88,7 @@ document.getElementById("today-date").textContent = new Date().toLocaleDateStrin
 
 const splashTexts = [
   "it's a website!",
-  "made with eleventy!",
+  "built with eleventy!",
 ];
 
 document.getElementById("splash-text").textContent = splashTexts[Math.floor(Math.random() * splashTexts.length)];
