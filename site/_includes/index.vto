@@ -31,9 +31,78 @@ metadata:
 
     <meta name="theme-color" content="#acc8ff" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      rel="preload"
+      href="/assets/fonts/Minecraft.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    >
+    <link
+      rel="preload"
+      href="/assets/fonts/Minecraft-Bold.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    >
+    <link
+      rel="preload"
+      href="/assets/images/avatar/igalaxy-2025.jpg"
+      as="image"
+    >
+    <link
+      rel="preload"
+      href="/assets/images/observatory/comet-observatory.png"
+      as="image"
+    >
+
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    {{ content }}
+    <header id="main-header">
+      <div id="avatar">
+        <img
+          src="/assets/images/avatars/igalaxy-2025.jpg"
+          width="150"
+          height="150"
+        >
+      </div>
+      <div id="nav-container">
+        <div id="logo">
+          <h2>igalaxy's</h2>
+          <h1>Comet Observatory</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="new"><a href="/">home</a></li>
+            <li class="disabled"><a>about</a></li>
+            <li class="disabled"><a>writings</a></li>
+            <li class="disabled"><a>shelf</a></li>
+            <li class="disabled"><a>links</a></li>
+          </ul>
+          <ul>
+            <li><a id="today-date">Jan 01, 1970</a></li>
+            <li>
+              <img
+                id="today-moon-phase"
+                src="/assets/images/moon-phases.png"
+                width="34"
+                height="34"
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="content">
+      {{ content }}
+    </div>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -1,3 +1,14 @@
+@font-face {
+  font-family: Minecraft;
+  src: url("/255/assets/fonts/Minecraft.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Minecraft;
+  font-weight: bold;
+  src: url("/255/assets/fonts/Minecraft-Bold.otf") format("opentype");
+}
+
 :root {
   --color-bg: #080b12;
   --color-bg-secondary: #262e40;
@@ -8,7 +19,9 @@
   --color-text-secondary: #c2c7d1;
 
   --color-primary-light: #acc8ff;
+  --color-primary-dark-ish: #5477b8;
   --color-primary-dark: #4866ab;
+  --color-primary-dark-er: #3e4a9f;
 }
 
 *,
@@ -34,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
+  font-family: "Rubik", sans-serif;
 }
 
 ::selection {
@@ -75,4 +89,133 @@ a:hover {
 
 a:focus {
   cursor: url("/assets/images/cursor/smg_cursor_grab.svg") 2 2, auto;
+}
+
+#avatar {
+  position: relative;
+}
+
+#avatar::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  opacity: 10%;
+}
+
+.disabled {
+  position: relative;
+}
+
+.disabled::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  backdrop-filter: grayscale(0.7);
+}
+
+#main-header {
+  display: flex;
+  height: 150px;
+  width: 800px;
+  a {
+    text-decoration: none;
+  }
+  #nav-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/images/observatory/comet-observatory.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    justify-content: end;
+    #logo {
+      h1, h2 {
+        margin: 5px;
+        text-shadow: var(--color-text-secondary) 0px 0px 4px;
+      }
+      h2 {
+        margin-left: 18px;
+        margin-bottom: -15px;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background: linear-gradient(
+        to bottom,
+        var(--color-primary-dark-ish) 50%,
+        var(--color-primary-dark) 45%,
+        var(--color-primary-dark-er)
+      );
+      ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        padding-left: 5px;
+        list-style: none;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            padding: 5px;
+          }
+          text-shadow: var(--color-text-secondary) 0px 0px 4px;
+        }
+        li:not(.disabled):hover {
+          background: linear-gradient(
+            to top,
+            var(--color-primary-dark-ish) 50%,
+            var(--color-primary-dark) 45%,
+            var(--color-primary-dark-er)
+          );
+        }
+        li:has(#today-moon-phase) {
+          display: block;
+          width: 34px;
+          height: 34px;
+          padding: 0;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+#today-moon-phase {
+  width: 8px;
+  height: 8px;
+  object-fit: none;
+  /**
+  full: -12px -12px;
+  waning gibbous: -44px -12px;
+  last quarter: -76px -12px;
+  waning crescent: -108px -12px;
+  new: -12px -44px;
+  waxing crescent -44px -44px;
+  1st quarter: -76px -44px;
+  waxing gibbous: -108px -44px;
+  */
+  object-position: -12px -12px;
+  transform: scale(4.25);
+  margin-left: 13px;
+  margin-top: 13px;
+  box-shadow: #101728 0px 0px 2px 1px;
 }
