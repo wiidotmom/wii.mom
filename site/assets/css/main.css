@@ -152,6 +152,10 @@ a:focus {
   pointer-events: none;
 }
 
+noscript {
+  background-color: var(--color-alert);
+}
+
 @keyframes splash-text {
   0% {
     transform: rotate(-15deg) scale(1);
