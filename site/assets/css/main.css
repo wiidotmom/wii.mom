@@ -287,6 +287,24 @@ img {
   background-color: #0c121f;
 }
 
+#main-container {
+  display: flex;
+  flex-direction: row;
+
+  aside {
+    background-color: red;
+    min-width: 150px;
+  }
+
+  section {
+    background-color: green;
+  }
+}
+
+footer {
+  background-color: blue;
+}
+
 @media only screen and (max-width: 625px) {
   #today {
     display: none !important;
