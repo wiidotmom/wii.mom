@@ -8,14 +8,13 @@
   image-rendering: pixelated;
 }
 
-.site-box > .sitefeature {
+.site-box > a > .sitefeature {
   visibility: hidden;
 }
 
 .site-box > a > p {
-  color: #f2f6ff !important;
-  bottom: 0;
-  right: 0;
+  color: #f2f6ff;
+  text-shadow: #262e40 0 1px 0, #c2c7d1 0px 0px 4px;
 }
 
 .site-box > a > span {

@@ -331,7 +331,7 @@ footer {
   height: 34px;
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 775px) {
   #today {
     display: none !important;
   }
@@ -340,7 +340,10 @@ footer {
   }
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 625px) {
+  #main-header {
+    height: 200px;
+  }
   #avatar {
     display: none !important;
   }
