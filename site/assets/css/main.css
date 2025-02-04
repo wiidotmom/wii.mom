@@ -346,7 +346,7 @@ footer {
     text-shadow:
       var(--color-bg-secondary) 0 1px 0,
       var(--color-text-secondary) 0px 0px 4px;
-    gap: 2.5px;
+    gap: 1.5px;
     li {
       height: 34px;
       display: flex;
