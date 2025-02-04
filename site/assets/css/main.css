@@ -357,6 +357,11 @@ footer {
         align-items: center;
         height: 100%;
       }
+      img {
+        width: 88px;
+        height: 31px;
+        background-color: var(--color-bg-secondary);
+      }
     }
   }
 }
