@@ -361,6 +361,10 @@ footer {
   }
 }
 
+iframe {
+  background-color: var(--color-bg-secondary);
+}
+
 @media only screen and (max-width: 1300px) {
   #side-iframes {
     display: none !important;
