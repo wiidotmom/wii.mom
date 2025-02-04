@@ -52,6 +52,7 @@ body {
   flex-direction: column;
   margin: auto;
   font-family: "Rubik", sans-serif;
+  position: relative;
 }
 
 ::selection {
@@ -357,6 +358,18 @@ footer {
         height: 100%;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #side-iframes {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 732px) {
+  #johnvertisement {
+    display: none !important;
   }
 }
 
