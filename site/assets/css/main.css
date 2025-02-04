@@ -327,8 +327,37 @@ img {
 }
 
 footer {
-  background-color: var(--color-primary-dark);
   height: 34px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-dark-ish) 50%,
+    var(--color-primary-dark) 45%,
+    var(--color-primary-dark-er)
+  );
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-shadow:
+      var(--color-bg-secondary) 0 1px 0,
+      var(--color-text-secondary) 0px 0px 4px;
+    gap: 2.5px;
+    li {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 775px) {
