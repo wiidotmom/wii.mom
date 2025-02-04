@@ -360,7 +360,6 @@ footer {
       img {
         width: 88px;
         height: 31px;
-        background-color: var(--color-bg-secondary);
         image-rendering: pixelated;
       }
     }
