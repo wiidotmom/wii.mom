@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - "rewrite"
+  workflow_dispatch:
 
 concurrency:
   group: production
