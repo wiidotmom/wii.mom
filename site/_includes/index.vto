@@ -121,6 +121,20 @@ metadata:
     <footer>
       <ul>
         <li>
+          copyleft 2025{{
+            new Date().getFullYear() != 2025 ? `-${new Date().getFullYear()}` : ""
+          }} igalaxy •&nbsp;<a
+            href="https://github.com/wiidotmom/wii.mom/commit/{{ build.commit.hash }}"
+            target="_blank"
+          >
+            <samp id="build-info">{{ build.commit.hash }}
+              {{
+                build.commit.message.length > 50
+                ? `${build.commit.message.substring(0, 50)}...`
+                : build.commit.message
+              }}</samp></a>
+        </li>
+        {{# <li>
           <a href="https://nekoweb.org/" target="_blank">
             <img
               src="https://nekoweb.org/assets/buttons/button6.gif"
@@ -183,7 +197,7 @@ metadata:
               src="/assets/images/buttons/xenia.gif"
             >
           </a>
-        </li>
+        </li> #}}
       </ul>
     </footer>
     <iframe
@@ -193,15 +207,8 @@ metadata:
     ></iframe>
     <div
       id="side-iframes"
-      style="position: absolute; top: 34px; right: -214px; width: 180px; display: flex; flex-direction: column; align-items: center; gap: 34px"
+      style="position: absolute; top: 34px; right: -184px; width: 150px; display: flex; flex-direction: column; align-items: center; gap: 34px"
     >
-      <iframe
-        width="180"
-        height="180"
-        style="border: none"
-        src="https://dimden.neocities.org/navlink/"
-        name="neolink"
-      ></iframe>
       <iframe
         width="150"
         height="450"
