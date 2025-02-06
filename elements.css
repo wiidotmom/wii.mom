@@ -15,6 +15,8 @@
 .site-box > a > p {
   color: #f2f6ff;
   text-shadow: #262e40 0 1px 0, #c2c7d1 0px 0px 4px;
+  margin-left: 80px;
+  margin-top: -20px;
 }
 
 .site-box > a > span {

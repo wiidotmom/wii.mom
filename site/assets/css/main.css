@@ -149,11 +149,15 @@ a:focus {
   position: relative;
 }
 
+a, a:visited {
+  color: inherit;
+}
+
 .new::after {
   top: 0;
   right: 0;
   position: absolute;
-  content: "new!";
+  content: "new!!";
   font-size: 8px;
   background: linear-gradient(
     to bottom,
@@ -163,8 +167,10 @@ a:focus {
   );
   padding: 2px;
   padding-bottom: 4px;
+  padding-right: 1.5px;
   line-height: 4px;
   pointer-events: none;
+  text-shadow: none;
 }
 
 noscript {
@@ -286,6 +292,9 @@ noscript {
           text-shadow:
             var(--color-bg-secondary) 0 1px 0,
             var(--color-text-secondary) 0px 0px 4px;
+          .new::after {
+            border-bottom-left-radius: 2px;
+          }
         }
         li:has(a) {
           padding: 0 !important;

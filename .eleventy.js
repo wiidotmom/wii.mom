@@ -21,4 +21,20 @@ export default async function(eleventyConfig) {
       includes: eleventyConfig.directories.includes,
     },
   });
+  eleventyConfig.addCollection("newContent", async function(collectionsApi) {
+    const oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+    return collectionsApi.getAll().filter(function(item) {
+      return item.page.date > oneWeekAgo;
+    });
+  });
+  eleventyConfig.addPairedShortcode("inlink", function(content, href, collections) {
+    const newContent = collections.newContent.map(x => x.page.url);
+    return `<a href=${href} ${newContent.includes(href) ? "class=\"new\"" : ""}>${content}</a>`;
+  });
+
+  return {
+    markdownTemplateEngine: "vto",
+  };
 }
