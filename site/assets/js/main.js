@@ -89,7 +89,7 @@ document.getElementById("today-date").textContent = new Date().toLocaleDateStrin
 const splashTexts = [
   "it's a website!",
   "built with eleventy!",
-  "check out existence community!",
+  "check out existencesmp.com!",
   "this is a really really really really long splash to test scaling, you shouldn't be able to read it",
 ];
 
