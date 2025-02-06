@@ -191,8 +191,8 @@ noscript {
 
 #splash-text {
   position: absolute;
-  bottom: 0;
-  left: 290px;
+  bottom: -10px;
+  left: 260px;
   font-size: 16px;
   font-weight: 300;
   font-family: "Minecraft";
