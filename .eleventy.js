@@ -1,4 +1,6 @@
 import { VentoPlugin } from "eleventy-plugin-vento";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -33,6 +35,14 @@ export default async function(eleventyConfig) {
     const newContent = collections.newContent.map(x => x.page.url);
     return `<a href=${href} ${newContent.includes(href) ? "class=\"new\"" : ""}>${content}</a>`;
   });
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    }).use(markdownItAttrs),
+  );
 
   return {
     markdownTemplateEngine: "vto",

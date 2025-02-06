@@ -97,7 +97,7 @@ metadata:
             <li class="disabled"><a>📦 projects</a></li>
             <li class="disabled"><a>📚 shelf</a></li>
             <li class="disabled"><a>🔧 tools</a></li>
-            <li class="disabled"><a>🔗 links</a></li>
+            <li>{{inlink "/links/", collections}}🔗 links{{/inlink}}</li>
           </ul>
           <ul id="today">
             <li id="today-date"></li>
@@ -115,7 +115,7 @@ metadata:
     </header>
     <div id="main-container">
       <aside></aside>
-      {{ content }}
+      <section id="main-content">{{ content }}</section>
       <aside></aside>
     </div>
     <footer>

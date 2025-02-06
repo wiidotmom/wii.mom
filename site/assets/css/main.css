@@ -294,6 +294,7 @@ noscript {
             var(--color-text-secondary) 0px 0px 4px;
           .new::after {
             border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
           }
         }
         li:has(a) {
@@ -343,9 +344,44 @@ img {
     color: var(--color-bg);
     flex-grow: 1;
     padding: 10px;
+    line-height: normal;
 
-    h1, h2, h3, p {
+    p, ul {
       margin: 0;
+    }
+    ul {
+      padding-left: 25px;
+    }
+    h1, h2, h3 {
+      margin: 10px 0;
+    }
+
+    a {
+      color: var(--color-primary-dark);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-thickness: 1.5px;
+    }
+
+    a[href]:not(:where(
+      /* exclude hash only links */
+      [href^="#"],
+      /* exclude javascript only links */
+      [href^="javascript:" i],  
+      /* exclude relative but not double slash only links */
+      [href^="/"]:not([href^="//"]),
+      /* domains to exclude */
+      [href*="//wii.mom"],
+    )):after {
+      content: ' ';
+      display: inline-block;
+      width: 14px;
+      height: 12px;
+      background-color: var(--color-primary-dark);
+      mask-image: url(/assets/images/ext.svg);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: right;
     }
   }
 }
