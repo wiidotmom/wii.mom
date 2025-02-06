@@ -89,9 +89,21 @@ document.getElementById("today-date").textContent = new Date().toLocaleDateStrin
 const splashTexts = [
   "it's a website!",
   "built with eleventy!",
+  "check out existence community!",
+  "this is a really really really really long splash to test scaling, you shouldn't be able to read it",
 ];
 
-document.getElementById("splash-text").textContent = splashTexts[Math.floor(Math.random() * splashTexts.length)];
+const splash = splashTexts[Math.floor(Math.random() * splashTexts.length)];
+const sandboxElement = document.getElementById("splash-text-sandbox");
+sandboxElement.textContent = splash;
+const scale = 200 / sandboxElement.clientWidth;
+const splashElement = document.getElementById("splash-text");
+if (sandboxElement.clientWidth > 200) {
+  splashElement.style.fontSize = `${16 * scale}px`;
+  const shadowOffset = scale * 2;
+  splashElement.style.textShadow = `#3f3f00 ${shadowOffset}px ${shadowOffset}px 0px`;
+}
+splashElement.textContent = splash;
 
 const avatars = [
   "/assets/images/avatars/igalaxy-mii.png",
