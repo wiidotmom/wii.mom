@@ -342,7 +342,7 @@ img {
 }
 
 footer {
-  height: 34px;
+  min-height: 34px;
   background: linear-gradient(
     to bottom,
     var(--color-primary-dark-ish) 50%,
@@ -353,8 +353,11 @@ footer {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -363,13 +366,11 @@ footer {
       var(--color-text-secondary) 0px 0px 4px;
     gap: 1.5px;
     li {
-      height: 34px;
       display: flex;
       align-items: center;
       a {
         display: flex;
         align-items: center;
-        height: 34px;
       }
       img {
         width: 88px;
