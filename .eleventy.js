@@ -31,9 +31,15 @@ export default async function(eleventyConfig) {
       return item.page.date > oneWeekAgo;
     });
   });
-  eleventyConfig.addPairedShortcode("inlink", function(content, href, collections) {
+  eleventyConfig.addPairedShortcode("navlink", function(content, href, text, collections) {
     const newContent = collections.newContent.map(x => x.page.url);
-    return `<a href=${href} ${newContent.includes(href) ? "class=\"new\"" : ""}>${content}</a>`;
+    const id = href.replaceAll("/", "-");
+    return `<a id="tooltip-${id}" data-has-tooltip href=${href} ${
+      newContent.includes(href) ? "class=\"new\"" : ""
+    }>${content} <div id="tooltip-${id}-content" class="tooltip">${text}</div></a>`;
+  });
+  eleventyConfig.addPairedShortcode("tooltip", function(content, id, text) {
+    return `<button id="tooltip-${id}" data-has-tooltip>${content} <div id="tooltip-${id}-content" class="tooltip">${text}</div></button>`;
   });
   eleventyConfig.setLibrary(
     "md",

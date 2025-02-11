@@ -20,8 +20,15 @@
   --color-bg-secondary-outline: #474d5c;
   --color-bg-content: #eee;
 
+  --color-bg-tooltip: rgba(16, 0, 16, 240);
+  --color-bg-tooltip-outline-top-left: rgba(80, 0, 255, 80);
+  --color-bg-tooltip-outline-bottom-right: rgba(40, 0, 128, 80);
+
   --color-text: #f2f6ff;
   --color-text-secondary: #c2c7d1;
+
+  --color-text-tooltip: #FCFCFC;
+  --color-text-tooltip-shadow: #3E3E3E;
 
   --color-primary-light: #acc8ff;
   --color-primary-dark-ish: #5477b8;
@@ -143,6 +150,7 @@ a:focus {
   width: 100%;
   height: 100%;
   backdrop-filter: grayscale(0.7);
+  cursor: not-allowed;
 }
 
 .new {
@@ -478,4 +486,50 @@ iframe {
   #nav-container > nav > ul {
     flex-wrap: wrap;
   }
+}
+
+button[data-has-tooltip] {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1.5px;
+  position: relative;
+  cursor: url("/assets/images/cursor/smg_cursor_pointer.svg") 2 2, auto;
+  overflow: visible;
+  text-wrap: nowrap;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.tooltip {
+  position: fixed;
+  visibility: hidden;
+  color: var(--color-text-tooltip);
+  text-shadow: var(--color-text-tooltip-shadow) 1px 1px 0px;
+  font-family: "Minecraft";
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  line-height: 9px;
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-image: url(/assets/images/tooltip/frame.png);
+  border-image-slice: 2;
+  border-image-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: var(--color-bg-tooltip);
+  text-align: left;
+  transform: scale(1.75);
+  backface-visibility: hidden;
+  pointer-events: none;
+  clip-path: polygon(0 1px, 1px 1px, 1px 0px, calc(100% - 1px) 0px, calc(100% - 1px) 1px, 100% 1px, 100% calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 100%, 1px 100%, 1px calc(100% - 1px), 0px calc(100% - 1px));
+  z-index: 999;
 }

@@ -93,12 +93,11 @@ metadata:
         </div>
         <nav>
           <ul>
-            <li>{{inlink "/", collections}}👤 about{{/inlink}}</li>
-            <li class="disabled"><a>📄 writings</a></li>
-            <li class="disabled"><a>📦 projects</a></li>
+            <li>{{navlink "/", "about this website!!", collections}}👤 about{{/navlink}}</li>
+            <li class="disabled"><a>🎨 creations</a></li>
             <li class="disabled"><a>📚 shelf</a></li>
             <li class="disabled"><a>🔧 tools</a></li>
-            <li>{{inlink "/links/", collections}}🔗 links{{/inlink}}</li>
+            <li>{{navlink "/links/", "links to cool stuff :D", collections}}🔗 links{{/navlink}}</li>
           </ul>
           <ul id="today">
             <li id="today-date"></li>
@@ -205,5 +204,6 @@ metadata:
       ></iframe>
     </div>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/tooltip.js"></script>
   </body>
 </html>
