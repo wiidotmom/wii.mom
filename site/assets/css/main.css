@@ -30,10 +30,13 @@
   --color-text-tooltip: #FCFCFC;
   --color-text-tooltip-shadow: #3E3E3E;
 
-  --color-primary-light: #acc8ff;
+  --color-primary-light-ish: #80A0DC;
+  --color-primary-middle: #6A8CCA;
   --color-primary-dark-ish: #5477b8;
   --color-primary-dark: #4866ab;
   --color-primary-dark-er: #3e4a9f;
+  --color-primary-dark-est: #28397d;
+  --color-primary-dark-est-er: #192b5e;
 
   --color-alert-shine: #ff4552;
   --color-alert: #ff0033;
@@ -331,6 +334,8 @@ noscript {
           height: 34px;
           padding: 0;
           margin-left: 5px;
+          position: relative;
+          box-shadow: #101728 0px 0px 2px 1px;
         }
       }
     }
@@ -348,7 +353,6 @@ img {
   transform: scale(4.25);
   margin-left: 13px;
   margin-top: 13px;
-  box-shadow: #101728 0px 0px 2px 1px;
   background-color: #0c121f;
 }
 
@@ -409,42 +413,70 @@ img {
 }
 
 footer {
-  min-height: 34px;
+  min-height: 78px;
   background: linear-gradient(
     to bottom,
     var(--color-primary-dark-ish) 50%,
     var(--color-primary-dark) 45%,
     var(--color-primary-dark-er)
   );
-  ul {
-    list-style-type: none;
+  span {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     padding-top: 1.5px;
     padding-bottom: 1.5px;
-    height: 100%;
+    height: 34px;
     justify-content: center;
     align-items: center;
     text-shadow:
       var(--color-bg-secondary) 0 1px 0,
       var(--color-text-secondary) 0px 0px 4px;
-    gap: 1.5px;
-    li {
-      display: flex;
-      align-items: center;
-      a {
-        display: flex;
-        align-items: center;
-      }
-      img {
-        width: 88px;
-        height: 31px;
-        image-rendering: pixelated;
-      }
+  }
+  #buttons {
+    min-height: 44px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary-dark-est-er) 50%,
+      var(--color-primary-dark-est) 45%,
+      var(--color-primary-dark-est)
+    );
+    background-color: var(--color-primary-dark-est);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3px;
+    gap: 3px;
+    flex-wrap: wrap;
+    a {
+      width: 88px;
+      height: 31px;
+      display: block;
     }
+    img {
+      margin: 0;
+      padding: 0;
+      width: 88px;
+      height: 31px;
+    }
+  }
+  #buttons::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 0 8px var(--color-bg);
+    top: 0;
+    left: 0;
+    pointer-events: none;
   }
 }
 
