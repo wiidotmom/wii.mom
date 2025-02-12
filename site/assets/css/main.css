@@ -113,11 +113,11 @@ body::after {
     url("/assets/images/cursor/smg_cursor_grab.svg");
 }
 
-a:hover {
+a[href]:hover {
   cursor: url("/assets/images/cursor/smg_cursor_hand.svg") 2 2, auto;
 }
 
-a:focus {
+a[href]:focus {
   cursor: url("/assets/images/cursor/smg_cursor_grab.svg") 2 2, auto;
 }
 
