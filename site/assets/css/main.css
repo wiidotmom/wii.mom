@@ -515,7 +515,6 @@ button[data-has-tooltip] {
   font-family: "Minecraft";
   padding: 2px;
   padding-top: 1px;
-  padding-bottom: 1px;
   line-height: 9px;
   font-size: 8px;
   display: flex;
