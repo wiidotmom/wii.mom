@@ -108,6 +108,7 @@ splashElement.textContent = splash;
 const avatars = [
   "/assets/images/avatars/igalaxy-mii.png",
   "/assets/images/avatars/igalaxy-minecraft.png",
+  "/assets/images/avatars/igalaxy-mii-wiiu.png",
 ];
 
 document.getElementById("avatar-image").src = avatars[Math.floor(Math.random() * avatars.length)];
